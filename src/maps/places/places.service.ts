@@ -9,7 +9,7 @@ import { ConfigService } from '@nestjs/config';
 export class PlacesService {
   constructor(
     private readonly gooleClient: GoogleMapsclient,
-    protected readonly configService: ConfigService
+    private readonly configService: ConfigService
     ) {}
 
   async findPlaces(text: string) {
