@@ -15,7 +15,7 @@ export class DirectionsService {
 
   async getDirections(originId: string, destinationId: string) {
     const resquestParams: DirectionsRequest['params'] = {
-      origin: `palace_id:${originId}`,
+      origin: `place_id:${originId}`,
       destination: `place_id:${destinationId}`,
       mode: TravelMode.driving,
       key: this.configService.get('GOOGLE_MAPS_API_KEY'),
